@@ -1,0 +1,54 @@
+import React from "react";
+
+import EmailField from "@/components/atoms/email_field";
+
+const Hero = () => {
+  const supported_by = [
+    "/images/support_amfi.png",
+    "/images/support_amfi.png",
+    "/images/support_amfi.png",
+    "/images/support_amfi.png",
+    "/images/support_amfi.png",
+  ];
+  return (
+    <>
+      <div className="p-5 flex items-center flex-col">
+        <div className="h-[150vh] w-full flex flex-col items-center">
+          <div className="sticky top-[50%] left-0 -translate-y-1/2 h-min">
+            <div className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center">
+              <h1 className="text-[10vw] font-bold text-center text-transparent">
+                Introducing Filit
+              </h1>
+            </div>
+          </div>
+          <img
+            src="/images/Hero__Phone.png"
+            alt=""
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60vh]"
+          />
+        </div>
+        <div className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center my-10">
+          <h1 className="text-[5vw] font-bold text-center text-transparent">
+            Save small, smaller and smallest money without hassle.
+          </h1>
+        </div>
+        <EmailField />
+      </div>
+      <div className="flex w-full gap-5 justify-evenly my-20 flex-wrap">
+        {supported_by.map((item, index) => {
+          return <img src={item} alt="" />;
+        })}
+      </div>
+      <div className="flex items-center justify-center w-full min-h-[80vh]">
+        <div className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center w-full">
+          <h1 className="text-[4vw] lg:text-[3vw] max-md:text-[40px] font-bold text-center text-transparent md:max-w-[60%] max-w-[90%]">
+            Filit helps you save money in a way that it grows to become your
+            power
+          </h1>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Hero;
