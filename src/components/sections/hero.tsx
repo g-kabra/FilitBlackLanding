@@ -36,7 +36,7 @@ const Hero = () => {
       </div>
       <div className="flex w-full gap-5 justify-evenly my-20 flex-wrap">
         {supported_by.map((item, index) => {
-          return <img src={item} alt="" />;
+          return <img src={item} key={index} alt="" />;
         })}
       </div>
       <div className="flex items-center justify-center w-full min-h-[80vh]">

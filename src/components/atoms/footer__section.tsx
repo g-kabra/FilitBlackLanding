@@ -15,9 +15,15 @@ const Footer__section = ({
 }) => {
   return (
     <div className="flex gap-2 flex-col">
-      <h1 className="pb-5 text-semibold text-[#FFFFFF] text-[20px]">{heading}</h1>
+      <h1 className="pb-5 text-semibold text-[#FFFFFF] text-[20px]">
+        {heading}
+      </h1>
       {items.map((item, index) => {
-        return <Link href={item.href}>{item.title}</Link>;
+        return (
+          <Link href={item.href} key={index}>
+            {item.title}
+          </Link>
+        );
       })}
     </div>
   );
