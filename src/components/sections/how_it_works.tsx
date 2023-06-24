@@ -18,8 +18,8 @@ const HowItWorks = () => {
     },
   ];
   return (
-    <div className="md:w-[60%] w-[90%] mx-auto grid md:grid-cols-2 grid-cols-1">
-      <div className="md:text-[5vw] text-[50px] font-bold font-manrope sticky top-[10vh] left-0 h-min bg-gradient-linear bg-clip-text backdrop-blur">
+    <div className="md:w-[60%] w-[90%] mx-auto grid md:grid-cols-2 grid-cols-1 my-10">
+      <div className="md:text-[5vw] text-[50px] font-bold font-manrope sticky top-[10vh] left-0 h-min bg-white-text-gradient bg-clip-text backdrop-blur">
         How it <span className="text-transparent">works</span>
       </div>
       <div className="flex flex-col md:gap-[20vh] gap-[50px]">

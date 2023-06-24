@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 import EmailField from "@/components/atoms/email_field";
 
@@ -15,13 +17,21 @@ const Hero = () => {
       <div className="p-5 flex items-center flex-col">
         <div className="h-[150vh] w-full flex flex-col items-center">
           <div className="sticky top-[50%] left-0 -translate-y-1/2 h-min">
-            <div className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center">
+            <motion.div
+              initial={{ opacity: 0, translateY: '100vh' }}
+              animate={{ opacity: 1, translateY: 0 }}
+              transition={{ duration: 1 }}
+              className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center"
+            >
               <h1 className="text-[10vw] font-bold text-center text-transparent">
                 Introducing Filit
               </h1>
-            </div>
+            </motion.div>
           </div>
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
             src="/images/Hero__Phone.png"
             alt=""
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60vh]"

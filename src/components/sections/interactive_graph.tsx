@@ -1,0 +1,181 @@
+"use client";
+import React, { useState } from "react";
+
+import Slider from "../helpers/slider";
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
+import Card from "../helpers/card";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
+  scales: {
+    y: {
+      ticks: {
+        font: {
+          size: 20,
+        },
+        callback: function (value: any, index: any, ticks: any) {
+          return "₹" + indianconversion(value);
+        },
+      },
+    },
+    x: {
+      ticks: {
+        font: {
+          size: 20,
+        },
+        callback: function (value: any, index: any, ticks: any) {
+          return value + "Yr";
+        },
+      },
+    },
+  },
+};
+
+function indianconversion(val: number) {
+  let s = val.toString();
+  if (val >= 10000000) s = (val / 10000000).toFixed(2) + " Cr";
+  else if (val >= 100000) s = (val / 100000).toFixed(2) + " Lac";
+  else if (val >= 1000) s = (val / 1000).toFixed(2) + " K";
+  return s;
+}
+
+function InteractiveGraph() {
+  const [baseAmount, setBaseAmount] = useState<number>(1000);
+  const [numYears, setNumYears] = useState<number>(10);
+  const [totalAmount, setTotalAmount] = useState<number>(1000);
+  const [data, setData] = useState({
+    labels: [1, 2, 3, 4],
+    datasets: [
+      {
+        label: "Investment Value",
+        data: [100, 200, 300, 400],
+        borderColor: "#667DF0",
+        backgroundColor: "#6F6BB2",
+      },
+    ],
+  });
+
+  let labels: number[] = [];
+  let xData: number[] = [];
+
+  React.useEffect(() => {
+    labels = [1];
+    xData = [baseAmount];
+    let totalAmount = baseAmount;
+    for (let i = 1; i < numYears + 1; i++) {
+      labels.push(i + 1);
+      xData.push((baseAmount + xData[i - 1]) * 1.12);
+      totalAmount += xData[i];
+    }
+    setData({
+      labels,
+      datasets: [
+        {
+          label: "Investment Value",
+          data: xData,
+          borderColor: "#667DF0",
+          backgroundColor: "#6F6BB2",
+        },
+      ],
+    });
+    setTotalAmount((xData[numYears]));
+    console.log(labels, xData, totalAmount);
+  }, [baseAmount, numYears]);
+
+  return (
+    <div className="flex flex-col items-center py-40">
+      <div className="bg-white-text-gradient bg-clip-text text-transparent pb-20">
+        <h1 className="md:text-[3vw] text-[50px] font-bold font-manrope text-center">
+          How much will your money grow
+        </h1>
+      </div>
+      <div className="grid grid-cols-2 w-[80%] py-20">
+        <div className="flex flex-col w-[80%] gap-20">
+          <Slider
+            title="Base Amount"
+            subtitle="(daily savings)"
+            valPrefix="₹"
+            value={baseAmount}
+            setValue={(value) => {
+              setBaseAmount(value);
+            }}
+            minVal={10}
+            maxVal={10000}
+            step={10}
+          ></Slider>
+          <Slider
+            title="Number of Years"
+            valSuffix="Yr"
+            value={numYears}
+            setValue={(value) => {
+              setNumYears(value);
+            }}
+            minVal={2}
+            maxVal={30}
+            step={1}
+          ></Slider>
+          <div className="p-10 flex-col flex gap-5 rounded-xl border border-white">
+            <div className="flex justify-between w-full text-xl">
+              <p>Amount Invested</p>
+              <p>{baseAmount}</p>
+            </div>
+            <hr />
+            <div className="flex justify-between w-full text-xl">
+              <p>Total Amount</p>
+              <p>{indianconversion(totalAmount)}</p>
+            </div>
+            <hr />
+            <div className="flex justify-between w-full text-xl">
+              <p>Gold Amount</p>
+              <p>{(totalAmount/100).toFixed(2) + "gms"}</p>
+            </div>
+            <hr />
+            <div className="flex justify-between w-full text-xl">
+              <p>Price of Gold</p>
+              <p>{100}</p>
+            </div>
+            <hr />
+            <div className="flex justify-between w-full text-xl">
+              <p>Profit</p>
+              <p>{indianconversion(totalAmount - baseAmount*numYears)}</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-5 justify-center">
+          <Card className="p-10">
+            <Line options={options} data={data} redraw={true} />
+          </Card>
+          <p className="p-5 bg-[#FFFFFF0F] w-fit text-xl">Live price of Gold {100}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default InteractiveGraph;
