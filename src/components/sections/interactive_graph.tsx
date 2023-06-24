@@ -37,7 +37,7 @@ export const options = {
     y: {
       ticks: {
         font: {
-          size: 20,
+          size: 10,
         },
         callback: function (value: any, index: any, ticks: any) {
           return "₹" + indianconversion(value);
@@ -47,7 +47,7 @@ export const options = {
     x: {
       ticks: {
         font: {
-          size: 20,
+          size: 10,
         },
         callback: function (value: any, index: any, ticks: any) {
           return value + "Yr";
@@ -115,8 +115,8 @@ function InteractiveGraph() {
           How much will your money grow
         </h1>
       </div>
-      <div className="grid grid-cols-2 w-[80%] py-20">
-        <div className="flex flex-col w-[80%] gap-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-[80%] py-20">
+        <div className="flex flex-col md:w-[80%] w-full gap-20">
           <Slider
             title="Base Amount"
             subtitle="(daily savings)"
@@ -168,7 +168,7 @@ function InteractiveGraph() {
           </div>
         </div>
         <div className="flex flex-col gap-5 justify-center">
-          <Card className="p-10">
+          <Card className="md:p-10 py-10">
             <Line options={options} data={data} redraw={true} />
           </Card>
           <p className="p-5 bg-[#FFFFFF0F] w-fit text-xl">Live price of Gold {100}</p>
