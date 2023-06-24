@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const howitworks__item = ({
+const Howitworks__item = ({
   heading,
   content,
 }: {
@@ -30,4 +30,4 @@ const howitworks__item = ({
   );
 };
 
-export default howitworks__item;
+export default Howitworks__item;

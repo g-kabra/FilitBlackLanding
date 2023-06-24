@@ -49,7 +49,7 @@ function Slider({
   minVal: number;
   maxVal: number;
   value: number;
-  setValue: (number) => void;
+  setValue: (arg0: number) => void;
   title: string;
   step:number;
   valPrefix?: string;
@@ -75,7 +75,7 @@ function Slider({
           max={maxVal}
           renderTrack={Track}
           renderThumb={Thumb}
-          onChange={(value:number) => setValue(value)}
+          onChange={(value:any) => setValue(value)}
           step={step}
         />
       </div>
