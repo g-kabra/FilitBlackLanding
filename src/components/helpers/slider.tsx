@@ -3,37 +3,38 @@ import React, { useState } from "react";
 import ReactSlider from "react-slider";
 import styled from "styled-components";
 
+// @ts-ignore
 const StyledSlider = styled(ReactSlider)`
-    width: 100%;
-    height: 25px;
-  `;
+  width: 100%;
+  height: 25px;
+`;
 
-  const StyledThumb = styled.div`
-    height: 25px;
-    line-height: 25px;
-    width: 25px;
-    text-align: center;
-    background-color: #667df0;
-    border-radius: 50%;
-    cursor: grab;
-    outline: none;
-  `;
+const StyledThumb = styled.div`
+  height: 25px;
+  line-height: 25px;
+  width: 25px;
+  text-align: center;
+  background-color: #667df0;
+  border-radius: 50%;
+  cursor: grab;
+  outline: none;
+`;
 
-  const Thumb = (props:any, state:any) => (
-    <StyledThumb {...props}></StyledThumb>
-  );
+const Thumb = (props: any, state: any) => (
+  <StyledThumb {...props}></StyledThumb>
+);
 
-  const StyledTrack = styled.div`
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: 0;
-    background: ${(props:any) => props.index === 1 ? "#D9D9D9" : "#667DF0"};
-    border-radius: 999px;
-    height: 3px
-  `;
-  const Track = (props:any, state:any) => (
-    <StyledTrack {...props} index={state.index} />
-  );
+const StyledTrack = styled.div`
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  background: ${(props: any) => (props.index === 1 ? "#D9D9D9" : "#667DF0")};
+  border-radius: 999px;
+  height: 3px;
+`;
+const Track = (props: any, state: any) => (
+  <StyledTrack {...props} index={state.index} />
+);
 
 function Slider({
   minVal,
@@ -44,14 +45,14 @@ function Slider({
   subtitle,
   step,
   value,
-  setValue
+  setValue,
 }: {
   minVal: number;
   maxVal: number;
   value: number;
   setValue: (arg0: number) => void;
   title: string;
-  step:number;
+  step: number;
   valPrefix?: string;
   valSuffix?: string;
   subtitle?: string;
@@ -75,7 +76,7 @@ function Slider({
           max={maxVal}
           renderTrack={Track}
           renderThumb={Thumb}
-          onChange={(value:any) => setValue(value)}
+          onChange={(value: any) => setValue(value)}
           step={step}
         />
       </div>
