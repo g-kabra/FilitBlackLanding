@@ -17,7 +17,7 @@ const Howitworks__item = ({
       className="mt-10"
       style={{
         opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+        transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
       }}
     >
       <h1 className="md:text-[3vw] text-[30px] text-transparent font-bold font-manrope bg-clip-text bg-gradient-linear w-min">

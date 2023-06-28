@@ -14,7 +14,7 @@ const HowItWorks = () => {
     },
     {
       heading: "Invest",
-      content: "Get interest on your savings. Your savings get invested that can we withdrawn as money or gold. ",
+      content: "Get interest on your savings. Your savings get invested that can be withdrawn as money or gold. ",
     },
   ];
   return (

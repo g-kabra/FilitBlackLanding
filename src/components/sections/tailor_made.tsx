@@ -8,7 +8,7 @@ function TailorMade() {
     <div className="flex flex-col items-center">
       <div className="bg-white-text-gradient bg-clip-text text-transparent pb-20">
         <h1 className="md:text-[3vw] text-[50px] font-bold font-manrope text-center">
-          Tailor made experience
+          Tailored with You at the Centre
         </h1>
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1 max-w-[80%] gap-5">
@@ -19,7 +19,7 @@ function TailorMade() {
             </p>
           </div>
           <div className="w-[80%] mx-auto relative aspect-[1.4]">
-            <Image src="/images/TailorMade__Graph.png" fill alt=""></Image>
+            <Image src="/images/Tailormade__graph.svg" fill alt=""></Image>
           </div>
         </Card>
         <Card className="flex-col gap-5 md:col-span-2">
@@ -32,8 +32,8 @@ function TailorMade() {
             <div className="bg-white-text-gradient bg-clip-text text-transparent max-w-[60%] text-center mx-auto flex flex-col">
               <p className="text-xl font-bold font-manrope">Active Savings</p>
             </div>
-            <div className="w-full relative aspect-[2.9] w-[60%] mx-auto">
-              <Image src="/images/TailorMade__Daily.png" fill alt=""></Image>
+            <div className="relative aspect-[2.9] w-[60%] mx-auto">
+              <Image src="/images/Tailormade__daily.svg" fill alt=""></Image>
             </div>
             <div className="bg-white-text-gradient bg-clip-text text-transparent max-w-[60%] text-center mx-auto flex flex-col">
               <p className="text-xl font-manrope">
@@ -52,8 +52,8 @@ function TailorMade() {
             <div className="bg-white-text-gradient bg-clip-text text-transparent max-w-[60%] text-center mx-auto flex flex-col">
               <p className="text-xl font-bold font-manrope">Active Savings</p>
             </div>
-            <div className="w-full relative aspect-[2.9] w-[60%] mx-auto">
-              <Image src="/images/TailorMade__Roundup.png" fill alt=""></Image>
+            <div className="relative aspect-[2.9] w-[60%] mx-auto">
+              <Image src="/images/Tailormade__roundup.svg" fill alt=""></Image>
             </div>
             <div className="bg-white-text-gradient bg-clip-text text-transparent max-w-[60%] text-center mx-auto flex flex-col">
               <p className="text-xl font-manrope">

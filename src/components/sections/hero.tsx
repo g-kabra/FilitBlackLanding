@@ -6,11 +6,11 @@ import EmailField from "@/components/atoms/email_field";
 
 const Hero = () => {
   const supported_by = [
+    "/images/support__founders.png",
+    "/images/support__bse.png",
     "/images/support_amfi.png",
-    "/images/support_amfi.png",
-    "/images/support_amfi.png",
-    "/images/support_amfi.png",
-    "/images/support_amfi.png",
+    "/images/support__microsoft.png",
+    "/images/support__startup.png",
   ];
   return (
     <>
@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="h-[150vh] w-full flex flex-col items-center">
           <div className="sticky top-[50%] left-0 -translate-y-1/2 h-min">
             <motion.div
-              initial={{ opacity: 0, translateY: '100vh' }}
+              initial={{ opacity: 0, translateY: "100vh" }}
               animate={{ opacity: 1, translateY: 0 }}
               transition={{ duration: 1 }}
               className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center"
@@ -39,12 +39,12 @@ const Hero = () => {
         </div>
         <div className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center my-10">
           <h1 className="text-[5vw] font-bold text-center text-transparent">
-            Save small, smaller and smallest money without hassle.
+            Take charge of your money & grow it. Effortlessly.
           </h1>
         </div>
         <EmailField />
       </div>
-      <div className="flex w-full gap-5 justify-evenly my-20 flex-wrap">
+      <div className="flex w-full gap-10 justify-evenly my-20 overflow-auto">
         {supported_by.map((item, index) => {
           return <img src={item} key={index} alt="" />;
         })}

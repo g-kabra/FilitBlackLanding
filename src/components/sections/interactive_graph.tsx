@@ -104,7 +104,7 @@ function InteractiveGraph() {
         },
       ],
     });
-    setTotalAmount((xData[numYears]));
+    setTotalAmount(xData[numYears]);
     console.log(labels, xData, totalAmount);
   }, [baseAmount, numYears]);
 
@@ -112,7 +112,7 @@ function InteractiveGraph() {
     <div className="flex flex-col items-center py-40">
       <div className="bg-white-text-gradient bg-clip-text text-transparent pb-20">
         <h1 className="md:text-[3vw] text-[50px] font-bold font-manrope text-center">
-          How much will your money grow
+          How Your Money Grows with Filit
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 w-[80%] py-20">
@@ -143,35 +143,37 @@ function InteractiveGraph() {
           <div className="p-10 flex-col flex gap-5 rounded-xl border border-white">
             <div className="flex justify-between w-full text-xl">
               <p>Amount Invested</p>
-              <p>{baseAmount}</p>
+              <p className="text-xl">{baseAmount}</p>
             </div>
             <hr />
             <div className="flex justify-between w-full text-xl">
               <p>Total Amount</p>
-              <p>{indianconversion(totalAmount)}</p>
+              <p className="text-xl">{indianconversion(totalAmount)}</p>
             </div>
             <hr />
             <div className="flex justify-between w-full text-xl">
               <p>Gold Amount</p>
-              <p>{(totalAmount/100).toFixed(2) + "gms"}</p>
+              <p className="text-xl">{(totalAmount / 100).toFixed(2) + "gms"}</p>
             </div>
             <hr />
             <div className="flex justify-between w-full text-xl">
               <p>Price of Gold</p>
-              <p>{100}</p>
+              <p className="text-xl">{100}</p>
             </div>
             <hr />
             <div className="flex justify-between w-full text-xl">
               <p>Profit</p>
-              <p>{indianconversion(totalAmount - baseAmount*numYears)}</p>
+              <p>{indianconversion(totalAmount - baseAmount * numYears)}</p>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-5 justify-center">
-          <Card className="md:p-10 py-10">
+          <Card className="md:p-10 md:py-10 my-2">
             <Line options={options} data={data} redraw={true} />
           </Card>
-          <p className="p-5 bg-[#FFFFFF0F] w-fit text-xl">Live price of Gold {100}</p>
+          <p className="p-5 ml-10 bg-[#FFFFFF0F] w-fit text-xl">
+            Live price of Gold <span className="font-semibold">{100}</span>
+          </p>
         </div>
       </div>
     </div>

@@ -63,7 +63,7 @@ function Slider({
         <p className="text-3xl text-[#F5F5F8]">
           {title} <span className="text-lg">{subtitle}</span>
         </p>
-        <p className="text-3xl">
+        <p className="text-[32px] font-semibold">
           {valPrefix}
           {value}
           {valSuffix}

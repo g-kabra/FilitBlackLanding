@@ -24,13 +24,13 @@ function Card({
     >
       <Tilt
         style={{ height: "100%" }}
-        tiltMaxAngleX={10}
-        tiltMaxAngleY={10}
+        tiltMaxAngleX={3}
+        tiltMaxAngleY={3}
         glareEnable={true}
-        glareMaxOpacity={0.1}
+        glareMaxOpacity={0.05}
       >
         <div
-          className={`flex p-5 items-center justify-center w-full h-full rounded-xl bg-[#161B22] border border-[#464646] ${className}`}
+          className={`flex md:p-10 p-3 items-center justify-center w-full h-full rounded-xl bg-[#161B22] border border-[#464646] ${className}`}
         >
           {children}
         </div>
