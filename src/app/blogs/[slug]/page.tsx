@@ -37,9 +37,9 @@ function getBlog(slug: string) {
     `);
 }
 
-function getBlogs() {
+function getBlogs(slug: string) {
   return sanityClient.fetch(groq`
-      *[_type == "post"]{
+      *[_type == "post" && slug.current != "${slug}"]{
         title,
         subtitle,
         slug,
@@ -52,15 +52,15 @@ function getBlogs() {
 }
 
 function BlogPost({ params }: { params: { slug: string } }) {
-  const [blog, setBlog] = React.useState();
-  const [blogs, setBlogs] = React.useState();
+  const [blog, setBlog] = React.useState<any>();
+  const [blogs, setBlogs] = React.useState<any>();
   const [loading, setLoading] = React.useState(true);
   React.useEffect(() => {
     setLoading(true);
     getBlog(params.slug).then((blog) => {
       setBlog(blog[0]);
     });
-    getBlogs().then((blogs) => setBlogs(blogs));
+    getBlogs(params.slug).then((blogs) => setBlogs(blogs));
     setLoading(false);
   }, []);
   return (
@@ -105,7 +105,7 @@ function BlogPost({ params }: { params: { slug: string } }) {
       )}
       <div className="w-[90%] mx-auto my-16 flex flex-col gap-10">
         <h1 className="text-5xl font-semibold text-center">More Blogs</h1>
-        <div className="flex flex-wrap gap-10">
+        <div className="flex overflow-auto gap-10">
           {blogs?.map(
             (blog: {
               mainImage?: any;
@@ -124,6 +124,7 @@ function BlogPost({ params }: { params: { slug: string } }) {
                     title={blog?.title}
                     subtitle={blog?.subtitle}
                     slug={blog?.slug.current}
+                    key={blog?.slug.current}
                   />
                 )
               );

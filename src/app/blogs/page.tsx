@@ -85,6 +85,7 @@ function Blog() {
                       title={blog?.title}
                       subtitle={blog?.subtitle}
                       slug={blog?.slug.current}
+                      key={blog?.slug.current}
                     ></BlogCard>
                   );
                 }
@@ -98,7 +99,7 @@ function Blog() {
                 placeholder="Search posts"
                 onChange={(e) => setSearch(e.target.value)}
               />
-              <div className="rounded-xl divide-y w-[90%] mx-auto border border-[#464646] bg-[#161B22] p-5 flex flex-col gap-5">
+              <div className="rounded-xl max-h-[80vh] overflow-scroll divide-y w-[90%] mx-auto border border-[#464646] bg-[#161B22] p-5 flex flex-col gap-5">
                 {blogs.map(
                   (blog: {
                     mainImage?: any;
@@ -117,6 +118,7 @@ function Blog() {
                       <Link
                         href={`/blogs/${blog?.slug.current}`}
                         className="flex flex-col gap-3"
+                        key={blog?.slug.current}
                       >
                         <h1 className="text-xl font-semibold">
                           {blog?.title}: {blog?.subtitle}
