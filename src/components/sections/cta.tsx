@@ -5,7 +5,7 @@ import EmailField from "../atoms/email_field";
 
 function CTA() {
   return (
-    <WhiteCard>
+    <WhiteCard id={"cta"}>
       <div className="flex flex-col mx-auto items-center gap-10 py-40 max-w-[90%]">
         <h1 className="text-6xl max-md:text-[50px] font-bold text-center font-manrope">
           Join waitlist for early access

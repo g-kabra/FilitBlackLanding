@@ -50,7 +50,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="w-full flex justify-center items-center mt-auto">
+    <div className="w-full flex justify-center items-center mt-auto" id={"footer"}>
       <div className="md:flex grid grid-cols-1 gap-20 justify-between w-[70%] m-20">
         <div className="flex flex-col gap-3">
           <img src="/logos/footer.svg" alt="" className="w-[200px]" />

@@ -2,15 +2,16 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const WhiteCard = ({ children }: { children: React.ReactNode }) => {
+const WhiteCard = ({ children, id }: { children: React.ReactNode, id?: string }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
     <motion.div
       className="min-h-screen my-10 py-10 w-screen flex justify-center items-center p-3"
+      id={id}
     >
       <div
-        className="w-[95%] rounded-[20px] mx-auto bg-[#F4F7FF] text-black border border-2"
+        className="w-[95%] rounded-[20px] mx-auto bg-[#F4F7FF] text-black border-2"
         style={{
           transform: isInView ? "scale(1.1)" : "scale(1)",
           transition:

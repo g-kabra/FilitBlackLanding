@@ -7,9 +7,11 @@ import Tilt from "react-parallax-tilt";
 function Card({
   children,
   className,
+  tilt=true,
 }: {
   children: React.ReactNode;
   className?: string;
+  tilt?: boolean;
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -24,8 +26,8 @@ function Card({
     >
       <Tilt
         style={{ height: "100%" }}
-        tiltMaxAngleX={3}
-        tiltMaxAngleY={3}
+        tiltMaxAngleX={tilt ? 3 : 0}
+        tiltMaxAngleY={tilt ? 3 : 0}
         glareEnable={true}
         glareMaxOpacity={0.05}
       >

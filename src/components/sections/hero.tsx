@@ -8,7 +8,7 @@ const Hero = () => {
   const supported_by = [
     "/images/support__founders.png",
     "/images/support__bse.png",
-    "/images/support_amfi.png",
+    "/images/support__amfi.png",
     "/images/support__microsoft.png",
     "/images/support__startup.png",
   ];
@@ -44,13 +44,17 @@ const Hero = () => {
         </div>
         <EmailField />
       </div>
-      <div className="flex w-full gap-10 justify-evenly my-20 overflow-auto">
-        {supported_by.map((item, index) => {
-          return <img src={item} key={index} alt="" />;
-        })}
+      <div className="relative my-20 h-20">
+        <div className="flex mx-auto w-fit gap-20 px-20 overflow-scroll">
+          {supported_by.map((item, index) => {
+            return <img src={item} key={index} alt="" />;
+          })}
+        </div>
+        <div className="w-[10%] bg-gradient-to-r absolute left-0 top-0 from-black h-full"></div>
+        <div className="w-[10%] bg-gradient-to-l absolute right-0 top-0 from-black h-full"></div>
       </div>
       <div className="flex items-center justify-center w-full min-h-[80vh]">
-        <div className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center w-full">
+        <div className="bg-clip-text bg-white-text-gradient flex flex-col justify-center items-center w-full">
           <h1 className="text-[4vw] lg:text-[3vw] max-md:text-[40px] font-bold text-center text-transparent md:max-w-[60%] max-w-[90%]">
             Filit helps you save money in a way that it grows to become your
             power
