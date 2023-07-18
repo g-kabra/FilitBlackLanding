@@ -60,7 +60,10 @@ function BlogPost({ params }: { params: { slug: string } }) {
     getBlog(params.slug).then((blog) => {
       setBlog(blog[0]);
     });
-    getBlogs(params.slug).then((blogs) => setBlogs(blogs));
+    getBlogs(params.slug).then((blogs) => {
+      setBlogs(blogs);
+    });
+
     setLoading(false);
   }, []);
   return (
