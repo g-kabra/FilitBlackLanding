@@ -10,13 +10,20 @@ function About() {
       <section className="flex flex-wrap md:grid grid-cols-2 w-[90%] gap-20 mx-auto py-20">
         <div className="flex flex-col gap-10 justify-center">
           <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-linear">
-            Meow
+            What is Filit?
           </h1>
-          <p className="w-[90%] md:w-[70%]">
-            emember, you must be able to make good on that promise, soLorem
-            Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has beenemember, you must be able to make good on that
-            promise, soLorem Ipsum is simply dummy text o
+          <p className="w-[90%] md:w-[70%] text-xl">
+            Filit is an automatic micro-investing platform that is
+            revolutionizing the Fin-Tech space in India.
+            <br /> <br />
+            We believe that everyone should have the opportunity to build a
+            secure financial future, and our platform is designed to help people
+            achieve this goal.
+            <br /> <br />
+            <span className="text-2xl">
+              All of this using just their{" "}
+              <span className="font-semibold">spare change.</span>
+            </span>
           </p>
         </div>
         <div className="flex justify-center w-full gap-10">
@@ -62,26 +69,48 @@ function About() {
           </div>
           <div className="flex flex-col gap-10 justify-center">
             <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-linear">
-              Meow
+              How it works?
             </h1>
-            <p className="w-[90%] md:w-[70%]">
-              emember, you must be able to make good on that promise, soLorem
-              Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has beenemember, you must be able to make
-              good on that promise, soLorem Ipsum is simply dummy text o
+            <p className="w-[90%] md:w-[70%] text-xl">
+              Imagine you GPay Rs. 18 to buy a cigarette. <br />
+              <br /> Filit makes a note of the amount and rounds it off to the
+              nearest 10, i.e. Rs. 20. Then, Filit invests the difference i.e Rs
+              2, into the best Mutual Funds, to give you inflation-beating
+              returns. Simple and effortless. <br />
+              <br />
+              <span className="text-2xl">
+                We help you grow your wealth, with{" "}
+                <span className="font-semibold">
+                  every transaction you make
+                </span>
+                .
+              </span>
             </p>
           </div>
         </div>
         <div className="flex flex-col-reverse md:grid grid-cols-2 gap-20">
           <div className="flex flex-col gap-10 justify-center">
             <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-linear">
-              Meow
+              Our Mission
             </h1>
-            <p className="w-[90%] md:w-[70%]">
-              emember, you must be able to make good on that promise, soLorem
-              Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has beenemember, you must be able to make
-              good on that promise, soLorem Ipsum is simply dummy text o
+            <p className="w-[90%] md:w-[70%] text-xl">
+              In addition to providing a user-centric investing platform, Filit
+              is on the mission of creating a financially literate India. We
+              provide our users with resources that&apos;ll help them make
+              better decisions with their money.
+              <br />
+              Overall, Filit is a game-changer in the investment space in India.
+              <br />
+              <br />
+              <span className="text-2xl">
+                By making investing easy, accessible, and automatic, we are
+                empowering people across the country to take control of their
+                financial future and{" "}
+                <span className="font-semibold">
+                  build the wealth they deserve
+                </span>
+                .
+              </span>
             </p>
           </div>
           <div className="w-[90%] aspect-square max-w-[500px] relative rounded-xl overflow-hidden mx-auto">
