@@ -38,7 +38,7 @@ const Hero = () => {
           />
         </div>
         <div className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center my-10">
-          <h1 className="text-[5vw] font-bold text-center text-transparent">
+          <h1 className="text-4xl font-bold text-center text-transparent">
             Take charge of your money & grow it. Effortlessly.
           </h1>
         </div>

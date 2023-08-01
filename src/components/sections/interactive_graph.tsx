@@ -66,7 +66,7 @@ function indianconversion(val: number) {
 }
 
 function InteractiveGraph() {
-  const [baseAmount, setBaseAmount] = useState<number>(1000);
+  const [baseAmount, setBaseAmount] = useState<number>(10);
   const [numYears, setNumYears] = useState<number>(10);
   const [totalAmount, setTotalAmount] = useState<number>(1000);
   const [data, setData] = useState({
@@ -86,11 +86,11 @@ function InteractiveGraph() {
 
   React.useEffect(() => {
     labels = [1];
-    xData = [baseAmount];
-    let totalAmount = baseAmount;
+    xData = [baseAmount*365];
+    let totalAmount = baseAmount*365;
     for (let i = 1; i < numYears + 1; i++) {
       labels.push(i + 1);
-      xData.push((baseAmount + xData[i - 1]) * 1.12);
+      xData.push((baseAmount*365 + xData[i - 1]) * 1.12);
       totalAmount += xData[i];
     }
     setData({
@@ -125,9 +125,9 @@ function InteractiveGraph() {
             setValue={(value) => {
               setBaseAmount(value);
             }}
-            minVal={10}
-            maxVal={10000}
-            step={10}
+            minVal={1}
+            maxVal={100}
+            step={1}
           ></Slider>
           <Slider
             title="Number of Years"
@@ -172,7 +172,7 @@ function InteractiveGraph() {
             <Line options={options} data={data} redraw={true} />
           </Card>
           <p className="p-5 ml-10 bg-[#FFFFFF0F] w-fit text-xl">
-            Live price of Gold <span className="font-semibold">{100}</span>
+            Live price of Gold <span className="font-semibold">100/0.0002gm</span>
           </p>
         </div>
       </div>

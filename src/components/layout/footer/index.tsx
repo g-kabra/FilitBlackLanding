@@ -10,44 +10,44 @@ const Footer = () => {
     },
     {
       title: "About",
-      href: "/",
+      href: "/about",
     },
-    {
-      title: "Contact Us",
-      href: "/",
-    },
-    {
-      title: "FAQ",
-      href: "/",
-    },
+    // {
+    //   title: "Contact Us",
+    //   href: "/",
+    // },
+    // {
+    //   title: "FAQ",
+    //   href: "/about",
+    // },
   ];
   const items2 = [
     {
       title: "Twitter",
-      href: "/",
+      href: "https://twitter.com/filitbharat",
     },
     {
       title: "Instagram",
-      href: "/",
+      href: "https://www.instagram.com/filit.in/",
     },
     {
       title: "Facebook",
-      href: "/",
+      href: "https://www.facebook.com/profile.php?id=100083312720068",
     },
   ];
   const items3 = [
-    {
-      title: "Terms of Use",
-      href: "/",
-    },
-    {
-      title: "Privacy Policy",
-      href: "/",
-    },
-    {
-      title: "Legal Notice",
-      href: "/",
-    },
+    // {
+    //   title: "Terms of Use",
+    //   href: "/",
+    // },
+    // {
+    //   title: "Privacy Policy",
+    //   href: "/",
+    // },
+    // {
+    //   title: "Legal Notice",
+    //   href: "/",
+    // },
   ];
   return (
     <div className="w-full flex justify-center items-center mt-auto" id={"footer"}>
@@ -56,13 +56,13 @@ const Footer = () => {
           <img src="/logos/footer.svg" alt="" className="w-[200px]" />
           <p className="text-[14px] opacity-[0.7]">
             Got questions? Reach us at <br />
-            hey@email.com
+            contact@filit.in
           </p>
         </div>
         <div className="flex flex-wrap text-[16px] gap-20 text-[#FFFFFFb3]">
           <Footer__section heading="HOME" items={items1} />
           <Footer__section heading="SOCIAL" items={items2} />
-          <Footer__section heading="LEGAL" items={items3} />
+          {/* <Footer__section heading="LEGAL" items={items3} /> */}
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ function CTA() {
         <h1 className="text-6xl max-md:text-[50px] font-bold text-center font-manrope">
           Join waitlist for early access
         </h1>
-        <p className="max-w-[90%] md:max-w-[40%] text-center mx-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy</p>
+        <p className="max-w-[90%] md:max-w-[40%] text-center mx-auto">It&apos;s never too late to get onboard. Enter your email now to join in to the financial revolution and make your money work for <span className="font-semibold">you.</span></p>
         <div className="md:w-[30%] w-full md:min-w-[500px]">
             <EmailField variant="secondary"/>
         </div>
