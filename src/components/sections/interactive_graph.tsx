@@ -105,7 +105,6 @@ function InteractiveGraph() {
       ],
     });
     setTotalAmount(xData[numYears]);
-    console.log(labels, xData, totalAmount);
   }, [baseAmount, numYears]);
 
   return (
