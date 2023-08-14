@@ -8,10 +8,12 @@ function Card({
   children,
   className,
   tilt=true,
+  style
 }: {
   children: React.ReactNode;
   className?: string;
   tilt?: boolean;
+  style?: React.CSSProperties
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -28,7 +30,7 @@ function Card({
         style={{ height: "100%" }}
         tiltMaxAngleX={tilt ? 3 : 0}
         tiltMaxAngleY={tilt ? 3 : 0}
-        glareEnable={true}
+        glareEnable={tilt ? true : false}
         glareMaxOpacity={0.05}
       >
         <div
