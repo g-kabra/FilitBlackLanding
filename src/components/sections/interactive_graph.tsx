@@ -9,24 +9,26 @@ import {
   LinearScale,
   PointElement,
   LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
 } from "chart.js";
-import { Line } from "react-chartjs-2";
+import { Chart } from "react-chartjs-2";
 import Card from "../helpers/card";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend
 );
 
 export const options = {
+  type: "bar",
   responsive: true,
   plugins: {
     legend: {
@@ -43,6 +45,7 @@ export const options = {
           return "₹" + indianconversion(value);
         },
       },
+      stacked: true,
     },
     x: {
       ticks: {
@@ -53,6 +56,7 @@ export const options = {
           return value + "Yr";
         },
       },
+      stacked: true,
     },
   },
 };
@@ -78,33 +82,50 @@ function InteractiveGraph() {
         borderColor: "#667DF0",
         backgroundColor: "#6F6BB2",
       },
+      {
+        label: "Profit",
+        data: [100, 200, 300, 400],
+        borderColor: "#667DF0",
+        backgroundColor: "#6F6BB2",
+      },
     ],
   });
 
   let labels: number[] = [];
   let xData: number[] = [];
+  let profitData: number[] = [];
 
   React.useEffect(() => {
     labels = [1];
-    xData = [baseAmount*365];
-    let totalAmount = baseAmount*365;
+    xData = [baseAmount * 365];
+    profitData = [0];
+    let totalAmount = baseAmount * 365;
     for (let i = 1; i < numYears + 1; i++) {
       labels.push(i + 1);
-      xData.push((baseAmount*365 + xData[i - 1]) * 1.12);
+      xData.push(365 * baseAmount + xData[i - 1]);
+      profitData.push(
+        (xData[i] + profitData[i - 1]) * 0.12 + profitData[i - 1]
+      );
       totalAmount += xData[i];
     }
     setData({
       labels,
       datasets: [
         {
-          label: "Investment Value",
+          label: "Invested amount",
           data: xData,
           borderColor: "#667DF0",
+          backgroundColor: "#464646",
+        },
+        {
+          label: "Profit amount",
+          data: profitData,
+          borderColor: "#ffffff",
           backgroundColor: "#6F6BB2",
         },
       ],
     });
-    setTotalAmount(xData[numYears]);
+    setTotalAmount(profitData[numYears]);
   }, [baseAmount, numYears]);
 
   return (
@@ -142,36 +163,40 @@ function InteractiveGraph() {
           <div className="p-10 flex-col flex gap-5 rounded-xl border border-white">
             <div className="flex justify-between w-full text-xl">
               <p>Amount Invested</p>
-              <p className="text-xl">{baseAmount}</p>
+              <p className="text-xl">
+                {"₹ " + indianconversion(baseAmount * 365 * (numYears + 1))}
+              </p>
             </div>
             <hr />
             <div className="flex justify-between w-full text-xl">
-              <p>Total Amount</p>
-              <p className="text-xl">{indianconversion(totalAmount)}</p>
+              <p>Estimated Returns</p>
+              <p className="text-xl">{"₹ " + indianconversion(totalAmount)}</p>
             </div>
             <hr />
             <div className="flex justify-between w-full text-xl">
-              <p>Gold Amount</p>
-              <p className="text-xl">{(totalAmount / 100).toFixed(2) + "gms"}</p>
-            </div>
-            <hr />
-            <div className="flex justify-between w-full text-xl">
-              <p>Price of Gold</p>
-              <p className="text-xl">{100}</p>
-            </div>
-            <hr />
-            <div className="flex justify-between w-full text-xl">
-              <p>Profit</p>
-              <p>{indianconversion(totalAmount - baseAmount * numYears)}</p>
+              <p>Maturity Value</p>
+              <p className="text-xl">
+                {"₹ " +
+                  indianconversion(
+                    totalAmount + baseAmount * 365 * (numYears + 1)
+                  )}
+              </p>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-5 justify-center">
-          <Card className="md:p-10 md:py-10 my-2">
-            <Line options={options} data={data} redraw={true} />
+          <Card className="md:p-10 md:py-10 my-2 flex-col gap-3" tilt={false}>
+            <h1 className="ml-auto text-2xl font-semibold">
+              {"₹ " +
+                indianconversion(
+                  totalAmount + baseAmount * 365 * (numYears + 1)
+                )}
+            </h1>
+            <Chart type="bar" options={options} data={data} redraw={true} />
           </Card>
           <p className="p-5 ml-10 bg-[#FFFFFF0F] w-fit text-xl">
-            Live price of Gold <span className="font-semibold">100/0.0002gm</span>
+            Live price of Gold{" "}
+            <span className="font-semibold">100/0.016gm</span>
           </p>
         </div>
       </div>

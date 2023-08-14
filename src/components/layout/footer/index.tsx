@@ -50,13 +50,19 @@ const Footer = () => {
     // },
   ];
   return (
-    <div className="w-full flex justify-center items-center mt-auto" id={"footer"}>
+    <div
+      className="w-full flex justify-center items-center mt-auto"
+      id={"footer"}
+    >
       <div className="md:flex grid grid-cols-1 gap-20 justify-between w-[70%] m-20">
         <div className="flex flex-col gap-3">
           <img src="/logos/footer.svg" alt="" className="w-[200px]" />
           <p className="text-[14px] opacity-[0.7]">
             Got questions? Reach us at <br />
-            contact@filit.in
+            contact@filit.in <br /> <br />
+            Filit Bharat Financial Service Pvt. Ltd., <br /> CIBA, Agnel
+            Technical Education Complex, <br /> Sector 9A, Vashi, Navi Mumbai.{" "}
+            <br /> Pin Code - 400703
           </p>
         </div>
         <div className="flex flex-wrap text-[16px] gap-20 text-[#FFFFFFb3]">
