@@ -32,7 +32,7 @@ function FAQ() {
     <div className="w-full flex flex-col gap-5">
       {FAQ.map((item, index) => {
         return (
-          <AnimatePresence>
+          <AnimatePresence key={index}>
             <div
               className="w-full rounded-2xl border-2 p-10 shadow-md bg-[#161B22] transition duration-300"
               style={{ borderColor: open === index ? "#ffffff" : "#30363D" }}

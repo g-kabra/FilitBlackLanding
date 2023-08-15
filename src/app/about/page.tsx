@@ -179,7 +179,7 @@ function About() {
         <p className="text-[#B4BCD0] text-xl">
           Everything you need to know about the product and billing.
         </p>
-        <FA/docs/4.3.3/getting-startedQ />
+        <FAQ />
       </section>
       <GetInTouch />
       <section className="my-20">
