@@ -3,29 +3,11 @@ import React, { useState } from "react";
 
 import Slider from "../helpers/slider";
 
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
+import { Chart as ChartJS, registerables } from "chart.js/auto";
 import { Chart } from "react-chartjs-2";
 import Card from "../helpers/card";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(...registerables);
 
 export const options = {
   type: "bar",

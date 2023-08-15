@@ -32,29 +32,30 @@ function FAQ() {
     <div className="w-full flex flex-col gap-5">
       {FAQ.map((item, index) => {
         return (
-          <AnimatePresence key={index}>
+          <div
+            className="w-full rounded-2xl border-2 p-10 shadow-md bg-[#161B22] transition duration-300"
+            style={{ borderColor: open === index ? "#ffffff" : "#30363D" }}
+            key={index}
+          >
             <div
-              className="w-full rounded-2xl border-2 p-10 shadow-md bg-[#161B22] transition duration-300"
-              style={{ borderColor: open === index ? "#ffffff" : "#30363D" }}
+              className="flex justify-between gap-10 items-center cursor-pointer"
+              onClick={() => {
+                open === index ? setOpen(-1) : setOpen(index);
+              }}
             >
-              <div
-                className="flex justify-between gap-10 items-center cursor-pointer"
-                onClick={() => {
-                  open === index ? setOpen(-1) : setOpen(index);
+              <p className="text-[#F7F7F8] text-xl">{item.question}</p>
+              <Image
+                src={"/icons/plus.svg"}
+                alt=""
+                height={24}
+                width={24}
+                style={{
+                  transform: open === index ? "rotate(90deg)" : "",
+                  transition: "all 0.3s ease-in-out",
                 }}
-              >
-                <p className="text-[#F7F7F8] text-xl">{item.question}</p>
-                <Image
-                  src={"/icons/plus.svg"}
-                  alt=""
-                  height={24}
-                  width={24}
-                  style={{
-                    transform: open === index ? "rotate(90deg)" : "",
-                    transition: "all 0.3s ease-in-out",
-                  }}
-                ></Image>
-              </div>
+              ></Image>
+            </div>
+            <AnimatePresence>
               {open === index && (
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -65,8 +66,8 @@ function FAQ() {
                   {item.answer}
                 </motion.div>
               )}
-            </div>
-          </AnimatePresence>
+            </AnimatePresence>
+          </div>
         );
       })}
     </div>
