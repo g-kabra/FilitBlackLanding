@@ -57,7 +57,8 @@ function TailorMade() {
             </div>
             <div className="bg-white-text-gradient bg-clip-text text-transparent max-w-[60%] text-center mx-auto flex flex-col">
               <p className="text-xl font-manrope">
-                You are saving <span className="font-bold">₹100 every day</span>
+                You are saving avg ₹42 from roundups{" "}
+                <span className="font-semibold">daily</span>
               </p>
             </div>
           </div>

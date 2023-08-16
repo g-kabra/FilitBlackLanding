@@ -129,7 +129,7 @@ function InteractiveGraph() {
               setBaseAmount(value);
             }}
             minVal={1}
-            maxVal={100}
+            maxVal={1000}
             step={1}
           ></Slider>
           <Slider

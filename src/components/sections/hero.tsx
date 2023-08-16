@@ -44,23 +44,25 @@ const Hero = () => {
         </div>
         <EmailField />
       </div>
-      <div className="relative my-20 h-20">
-        <div className="flex mx-auto w-fit gap-20 px-20 overflow-scroll">
+      <div className="relative my-20 h-20 overflow-hidden">
+        <div className="flex mx-auto items-center gap-20 px-5 overflow-x-scroll">
+          <div className="grow"></div>
           {supported_by.map((item, index) => {
             return <img src={item} key={index} alt="" />;
           })}
+          <div className="grow"></div>
         </div>
         <div className="w-[10%] bg-gradient-to-r absolute left-0 top-0 from-black h-full"></div>
         <div className="w-[10%] bg-gradient-to-l absolute right-0 top-0 from-black h-full"></div>
       </div>
-      <div className="flex items-center justify-center w-full min-h-[80vh]">
+      {/* <div className="flex items-center justify-center w-full min-h-[80vh]">
         <div className="bg-clip-text bg-white-text-gradient flex flex-col justify-center items-center w-full">
           <h1 className="text-[2vw] lg:text-[2.5vw] max-md:text-[40px] font-bold text-center text-transparent md:max-w-[60%] max-w-[90%]">
             Discover Filit: <br />
             Where Small Choices Lead to Big Savings
           </h1>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
