@@ -7,7 +7,7 @@ const Howitworks__item = ({
   content,
 }: {
   heading: string;
-  content: Element;
+  content: React.ReactNode;
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
