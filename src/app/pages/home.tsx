@@ -17,7 +17,7 @@ const Home = () => {
       <Hero />
       <HowItWorks />
       <InfoBlock />
-      <TailorMade />
+      <TailorMade /> 
       <InteractiveGraph />
       <CTA />
     </>

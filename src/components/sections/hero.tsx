@@ -38,8 +38,8 @@ const Hero = () => {
           />
         </div>
         <div className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center my-10">
-          <h1 className="text-4xl font-bold text-center text-transparent">
-            Take charge of your money & grow it. Effortlessly.
+          <h1 className="text-2xl font-bold text-center text-transparent">
+            Save Daily, Invest Automatically and Watch Your Money Grow
           </h1>
         </div>
         <EmailField />
@@ -55,9 +55,9 @@ const Hero = () => {
       </div>
       <div className="flex items-center justify-center w-full min-h-[80vh]">
         <div className="bg-clip-text bg-white-text-gradient flex flex-col justify-center items-center w-full">
-          <h1 className="text-[4vw] lg:text-[3vw] max-md:text-[40px] font-bold text-center text-transparent md:max-w-[60%] max-w-[90%]">
-            Filit helps you save money in a way that it grows to become your
-            power
+          <h1 className="text-[2vw] lg:text-[2.5vw] max-md:text-[40px] font-bold text-center text-transparent md:max-w-[60%] max-w-[90%]">
+            Discover Filit: <br />
+            Where Small Choices Lead to Big Savings
           </h1>
         </div>
       </div>

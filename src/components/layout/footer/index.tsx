@@ -9,13 +9,13 @@ const Footer = () => {
       href: "/",
     },
     {
+      title: "Blog",
+      href: "/blogs",
+    },
+    {
       title: "About",
       href: "/about",
     },
-    // {
-    //   title: "Contact Us",
-    //   href: "/",
-    // },
     // {
     //   title: "FAQ",
     //   href: "/about",

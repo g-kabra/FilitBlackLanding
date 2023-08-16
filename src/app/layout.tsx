@@ -18,7 +18,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      
       <body className={inter.className + ' overflow-x-hidden w-screen'}>
         <ToastContainer theme='dark'/>
         {children}

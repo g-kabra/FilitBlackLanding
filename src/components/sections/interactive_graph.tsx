@@ -35,9 +35,10 @@ export const options = {
           size: 10,
         },
         callback: function (value: any, index: any, ticks: any) {
-          return value + "Yr";
+          return value + 1 + "Yr";
         },
       },
+      min: 1,
       stacked: true,
     },
   },
@@ -53,7 +54,7 @@ function indianconversion(val: number) {
 
 function InteractiveGraph() {
   const [baseAmount, setBaseAmount] = useState<number>(10);
-  const [numYears, setNumYears] = useState<number>(10);
+  const [numYears, setNumYears] = useState<number>(9);
   const [totalAmount, setTotalAmount] = useState<number>(1000);
   const [data, setData] = useState({
     labels: [1, 2, 3, 4],
@@ -82,7 +83,7 @@ function InteractiveGraph() {
     xData = [baseAmount * 365];
     profitData = [0];
     let totalAmount = baseAmount * 365;
-    for (let i = 1; i < numYears + 1; i++) {
+    for (let i = 1; i < numYears; i++) {
       labels.push(i + 1);
       xData.push(365 * baseAmount + xData[i - 1]);
       profitData.push(
@@ -107,7 +108,7 @@ function InteractiveGraph() {
         },
       ],
     });
-    setTotalAmount(profitData[numYears]);
+    setTotalAmount(profitData[numYears - 1]);
   }, [baseAmount, numYears]);
 
   return (
@@ -136,7 +137,7 @@ function InteractiveGraph() {
             valSuffix="Yr"
             value={numYears}
             setValue={(value) => {
-              setNumYears(value);
+              setNumYears(value - 1);
             }}
             minVal={2}
             maxVal={30}
@@ -176,9 +177,9 @@ function InteractiveGraph() {
             </h1>
             <Chart type="bar" options={options} data={data} redraw={true} />
           </Card>
-          <p className="p-5 ml-10 bg-[#FFFFFF0F] w-fit text-xl">
-            Live price of Gold{" "}
-            <span className="font-semibold">100/0.016gm</span>
+          <p className="p-5 ml-10 bg-[#FFFFFF0F] w-fit text-sm text-[#FFFFFF1c]">
+            *The calculations are based on to historical performance of Gold
+            over last 10 years
           </p>
         </div>
       </div>

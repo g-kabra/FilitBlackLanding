@@ -59,7 +59,7 @@ function Slider({
 }) {
   return (
     <div className="flex flex-col gap-5 w-full">
-      <div className="flex justify-between items-center">
+      <div className="flex gap-3 justify-between items-center">
         <p className="text-3xl text-[#F5F5F8]">
           {title} <span className="text-lg">{subtitle}</span>
         </p>

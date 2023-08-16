@@ -8,7 +8,7 @@ function TailorMade() {
     <div className="flex flex-col items-center">
       <div className="bg-white-text-gradient bg-clip-text text-transparent pb-20">
         <h1 className="md:text-[3vw] text-[50px] font-bold font-manrope text-center">
-          Tailored with You at the Centre
+          Your One-Stop Savings Solution
         </h1>
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1 max-w-[80%] gap-5">

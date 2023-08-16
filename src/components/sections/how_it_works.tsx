@@ -5,19 +5,32 @@ import HowItWorksItem from "../atoms/howitworks__item";
 const HowItWorks = () => {
   const items = [
     {
-      heading: "Spend",
-      content:
-        "Connect your UPI, and boom! Filit becomes your money detective. Track those expenses like a pro and unravel the mysteries of your spending habits!",
+      heading: "Daily Savings",
+      content: (
+        <p>
+          Watch your money grow, day by day! <br /> Set a daily amount to save
+          and watch your savings grow like magic.
+        </p>
+      ),
     },
     {
       heading: "Save",
-      content:
-        "Filit takes saving to the next level. It is like having a digital piggy bank that automatically sneaks away a bit of cash from your income every single day. Genius, right?",
+      content: (
+        <p>
+          Grow your savings, penny by penny! <br /> We round up your purchases
+          and save the difference for you <br /> Kyunki &rdquo;Boond boond se
+          ghada bharta hai&rdquo;
+        </p>
+      ),
     },
     {
       heading: "Invest",
-      content:
-        "Prepare for gold rush vibes! Your hard-earned money gets a VIP treatment. Filit cleverly invests it in 24-carat gold, that's right, the real deal! Watch your wealth sparkle and shine.",
+      content: (
+        <p>
+          Secure your dreams with ease, save sudden bonuses or that extra cash
+          for your future goals. <br /> Save instantly with just two clicks.
+        </p>
+      ),
     },
   ];
   return (

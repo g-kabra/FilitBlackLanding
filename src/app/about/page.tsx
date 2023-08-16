@@ -172,7 +172,7 @@ function About() {
           </div>
         </div>
       </section> */}
-      <section className="my-10 flex flex-col items-center gap-3 w-[90%] max-w-5xl mx-auto">
+      <section className="my-10 flex flex-col items-center gap-5 w-[90%] max-w-5xl mx-auto">
         <h1 className="text-7xl font-bold text-center text-white">
           Frequently Asked Questions
         </h1>
