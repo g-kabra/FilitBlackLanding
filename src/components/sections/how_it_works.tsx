@@ -7,7 +7,7 @@ const HowItWorks = () => {
     {
       heading: "Daily Savings",
       content: (
-        <p>
+        <p className="text-sm mt-2 md:max-w-[60%] max-w-[90%] text-[#B4BCD0]">
           Watch your money grow, day by day! <br /> Set a daily amount to save
           and watch your savings grow like magic.
         </p>
@@ -16,7 +16,7 @@ const HowItWorks = () => {
     {
       heading: "Save",
       content: (
-        <p>
+        <p className="text-sm mt-2 md:max-w-[60%] max-w-[90%] text-[#B4BCD0]">
           Grow your savings, penny by penny! <br /> We round up your purchases
           and save the difference for you <br /> Kyunki &rdquo;Boond boond se
           ghada bharta hai&rdquo;
@@ -26,7 +26,7 @@ const HowItWorks = () => {
     {
       heading: "Invest",
       content: (
-        <p>
+        <p className="text-sm mt-2 md:max-w-[60%] max-w-[90%] text-[#B4BCD0]">
           Secure your dreams with ease, save sudden bonuses or that extra cash
           for your future goals. <br /> Save instantly with just two clicks.
         </p>
