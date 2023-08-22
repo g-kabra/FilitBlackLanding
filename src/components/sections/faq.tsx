@@ -25,12 +25,12 @@ function FAQ() {
     {
       question: "What is Digital Gold?",
       answer:
-        "Absolutely, Filit is completely safe & secured. We've teamed up with Cashfree to make sure your payments are safe. We use UPI autopay, which is a secure way to pay, and we follow rules from RBI, the bank authority. Your money goes into buying real gold (24K 999 pure gold) from Augmont. which is NABL and BIS accredited and a member of India Good Delivery standard on NSE, BSE and MCX. The gold is hallmarked by a government-approved hallmarking agency as per the BIS guidelines.. This gold is completely secured in Sequel Vaults, which are watched over by special people registered with SEBI and IDBI, two important organizations.",
+        "Digital gold is a modern way to invest in real gold. It's 24k pure gold that's kept safe in special vaults for you. You can start investing in digital gold with just Rs.1 using Filit. ",
     },
     {
       question: "Is Filit Safe?",
       answer:
-        "Everything you need to know about the product and billing.Everything you need to know about the product and billing.Everything you need to know about the product and billing",
+        "Absolutely, Filit is completely safe & secured. We've teamed up with Cashfree to make sure your payments are safe. We use UPI autopay, which is a secure way to pay, and we follow rules from RBI, the bank authority. Your money goes into buying real gold (24K 999 pure gold) from Augmont. which is NABL and BIS accredited and a member of India Good Delivery standard on NSE, BSE and MCX. The gold is hallmarked by a government-approved hallmarking agency as per the BIS guidelines.. This gold is completely secured in Sequel Vaults, which are watched over by special people registered with SEBI and IDBI, two important organizations.",
     },
     {
       question: "Can I withdraw money whenever I want?",

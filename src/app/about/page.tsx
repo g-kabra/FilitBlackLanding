@@ -50,8 +50,8 @@ function About() {
             About Us
           </h1>
           <p className="w-[90%] md:w-[70%] text-lg text-center mx-auto max-w-5xl">
-            Solutions are born when we face the monster called &rdquo;problem&rdquo;. For
-            us, that monster was -
+            Solutions are born when we face the monster called
+            &rdquo;problem&rdquo;. For us, that monster was -
             <span className="font-semibold"> not having enough money.</span>
             <br />
             We have faced hardships in life when a major health crisis strikes,
@@ -65,10 +65,10 @@ function About() {
             <br />
             <br />
             So we founded Filit - An app to help Indians build healthy financial
-            habits. No Get-Rich-Quick schemes, no &rdquo;21 Din Mei Paisa Double&rdquo;,
-            just the habit of saving daily. Because consistently making a choice
-            to save money and invest it is the only realistic path to wealth
-            creation.
+            habits. No Get-Rich-Quick schemes, no &rdquo;21 Din Mei Paisa
+            Double&rdquo;, just the habit of saving daily. Because consistently
+            making a choice to save money and invest it is the only realistic
+            path to wealth creation.
             <br />
             <br />
             We believe the compound effect of forming good financial habits will
