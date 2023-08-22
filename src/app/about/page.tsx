@@ -44,30 +44,38 @@ function About() {
   ];
   return (
     <Layout>
-      <section className="flex flex-wrap lg:grid grid-cols-2 w-[90%] gap-20 mx-auto py-20">
+      <section className="flex flex-wrap lg:grid grid-cols-1 w-[90%] gap-20 mx-auto py-20">
         <div className="flex flex-col gap-10 justify-center">
-          <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-linear">
-            What is Filit?
+          <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-linear text-center">
+            About Us
           </h1>
-          <p className="w-[90%] md:w-[70%] text-lg">
-            Solutions are born when we face the monster called
-            &rdquo;problem&rdquo;. For us, that monster was - not having enough
-            money. We have faced hardships in life when a major health crisis
-            strikes, struggling to afford quality education for our children, or
-            even the desire to own a house appears to be beyond reach. <br />
-            <br /> We when we ventured out to solve this problem, we discovered
-            that the antidote to this problem is not financial knowledge, but
-            rather building intentional financial behavior that works. <br />
-            <br /> So we founded Filit to help Indians build healthy financial
-            habits - no get-rich-quick schemes, no &rdquo;21 din mei paisa
-            double,&rdquo; just the habit of saving daily. Because consistently
-            making a choice to save money and invest it is the only realistic
-            path to wealth creation. <br />
+          <p className="w-[90%] md:w-[70%] text-lg text-center mx-auto max-w-5xl">
+            Solutions are born when we face the monster called "problem". For
+            us, that monster was -{" "}
+            <span className="font-semibold">not having enough money.</span>{" "}
+            <br />
+            We have faced hardships in life when a major health crisis strikes,
+            struggling to afford quality education for our children, or even the
+            desire to own a house appears to be beyond reach.
+            <br />
+            <br />
+            We when we stepped out to solve this problem, we discovered that the
+            solution to this problem is not financial knowledge, but rather
+            building intentional financial behavior that works.
+            <br />
+            <br />
+            So we founded Filit - An app to help Indians build healthy financial
+            habits. No Get-Rich-Quick schemes, no "21 Din Mei Paisa Double",
+            just the habit of saving daily. Because consistently making a choice
+            to save money and invest it is the only realistic path to wealth
+            creation.
+            <br />
             <br />
             We believe the compound effect of forming good financial habits will
             lead people towards wealth creation and a better quality of life.
             With Filit, we&apos;re here to foster those habits and make
-            consistent investment a reality for everyone. <br />
+            consistent investment a reality for everyone.
+            <br />
             <br />
             <span className="text-2xl">
               All of this using just their{" "}
@@ -75,7 +83,7 @@ function About() {
             </span>
           </p>
         </div>
-        <div className="flex items-center justify-center w-full gap-10">
+        {/* <div className="flex items-center justify-center w-full gap-10">
           <div className="flex flex-col w-[40%] justify-center">
             <div className="aspect-[3/5] max-md:w-full rounded-full  relative overflow-hidden">
               <Image
@@ -104,7 +112,7 @@ function About() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
       {/* <section className="md:w-[80%] w-[90%] mx-auto flex flex-col gap-20">
         <div className="flex flex-col md:grid grid-cols-2 gap-20">
