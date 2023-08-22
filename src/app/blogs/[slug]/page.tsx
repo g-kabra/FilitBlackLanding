@@ -12,6 +12,7 @@ import getDate from "@/utils/dateFormatter";
 import BlogCard from "@/components/atoms/blogcard";
 import CTA from "@/components/sections/cta";
 import Layout from "@/components/layout";
+import sanityIoImageLoader from "@/utils/sanityLoader";
 
 const sanityClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -97,6 +98,7 @@ function BlogPost({ params }: { params: { slug: string } }) {
                 fill
                 alt={"Blog Cover"}
                 style={{ objectFit: "cover" }}
+                loader={sanityIoImageLoader}
               />
             </div>
             <div className="w-[70%] max-md:w-[90%] mx-auto my-10">

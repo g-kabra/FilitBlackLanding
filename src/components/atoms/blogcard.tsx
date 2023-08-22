@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import getDate from "../../utils/dateFormatter";
+import sanityIoImageLoader from "@/utils/sanityLoader";
+
 
 function BlogCard({
   image,
@@ -26,6 +28,7 @@ function BlogCard({
           src={image}
           alt="Blog Photo"
           style={{ objectFit: "cover" }}
+          loader={sanityIoImageLoader}
         />
       </div>
       {date && (
