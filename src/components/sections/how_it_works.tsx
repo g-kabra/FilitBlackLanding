@@ -14,7 +14,7 @@ const HowItWorks = () => {
       ),
     },
     {
-      heading: "Save",
+      heading: "Fillups",
       content: (
         <p className="text-sm mt-2 md:max-w-[60%] max-w-[90%] text-[#B4BCD0]">
           Grow your savings, penny by penny! <br /> We round up your purchases
@@ -24,7 +24,7 @@ const HowItWorks = () => {
       ),
     },
     {
-      heading: "Invest",
+      heading: "One Time Savings",
       content: (
         <p className="text-sm mt-2 md:max-w-[60%] max-w-[90%] text-[#B4BCD0]">
           Secure your dreams with ease, save sudden bonuses or that extra cash

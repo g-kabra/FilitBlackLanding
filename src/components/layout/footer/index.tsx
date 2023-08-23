@@ -59,7 +59,10 @@ const Footer = () => {
           <img src="/logos/footer.svg" alt="" className="w-[200px]" />
           <p className="text-[14px] opacity-[0.7]">
             Got questions? Reach us at <br />
-            contact@filit.in <br /> <br />
+            <a href="mailto:charwak@filit.in" className="hover:underline">
+              charwak@filit.in
+            </a>
+            <br /> <br />
             Filit Bharat Financial Service Pvt. Ltd., <br /> CIBA, Agnel
             Technical Education Complex, <br /> Sector 9A, Vashi, Navi Mumbai.{" "}
             <br /> Pin Code - 400703

@@ -65,9 +65,9 @@ function TailorMade() {
         </Card>
         <Card className="flex-col gap-5">
           <div className="bg-white-text-gradient bg-clip-text text-transparent text-center mx-auto flex flex-col">
-            <p className="text-3xl leading-relaxed font-bold font-manrope">
+            <p className="text-2xl leading-relaxed font-bold font-manrope">
               More features <br />
-              <span className="w-full text-5xl">coming soon</span>
+              <span className="w-full text-3xl">coming soon</span>
             </p>
           </div>
         </Card>
