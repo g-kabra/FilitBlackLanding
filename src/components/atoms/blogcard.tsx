@@ -28,6 +28,7 @@ function BlogCard({
           src={image}
           alt="Blog Photo"
           style={{ objectFit: "cover" }}
+          //@ts-ignore
           loader={sanityIoImageLoader}
         />
       </div>

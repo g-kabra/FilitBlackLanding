@@ -98,6 +98,7 @@ function BlogPost({ params }: { params: { slug: string } }) {
                 fill
                 alt={"Blog Cover"}
                 style={{ objectFit: "cover" }}
+                //@ts-ignore
                 loader={sanityIoImageLoader}
               />
             </div>
