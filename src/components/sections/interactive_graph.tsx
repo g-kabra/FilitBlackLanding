@@ -144,21 +144,21 @@ function InteractiveGraph() {
             step={1}
           ></Slider>
           <div className="p-10 flex-col flex gap-5 rounded-xl border border-white">
-            <div className="flex justify-between w-full text-xl">
+            <div className="flex justify-between w-full gap-2 text-xl">
               <p>Amount Invested</p>
-              <p className="text-xl">
+              <p className="text-xl whitespace-nowrap">
                 {"₹ " + indianconversion(baseAmount * 365 * (numYears + 1))}
               </p>
             </div>
             <hr />
-            <div className="flex justify-between w-full text-xl">
+            <div className="flex justify-between w-full gap-2 text-xl">
               <p>Estimated Returns</p>
-              <p className="text-xl">{"₹ " + indianconversion(totalAmount)}</p>
+              <p className="text-xl whitespace-nowrap">{"₹ " + indianconversion(totalAmount)}</p>
             </div>
             <hr />
-            <div className="flex justify-between w-full text-xl">
+            <div className="flex justify-between w-full gap-2 text-xl">
               <p>Maturity Value</p>
-              <p className="text-xl">
+              <p className="text-xl whitespace-nowrap">
                 {"₹ " +
                   indianconversion(
                     totalAmount + baseAmount * 365 * (numYears + 1)
