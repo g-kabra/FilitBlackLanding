@@ -138,9 +138,9 @@ function InteractiveGraph() {
             valSuffix="Yr"
             value={numYears}
             setValue={(value) => {
-              setNumYears(value - 1);
+              setNumYears(value);
             }}
-            minVal={2}
+            minVal={1}
             maxVal={30}
             step={1}
           ></Slider>
