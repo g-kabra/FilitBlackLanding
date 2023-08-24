@@ -17,7 +17,7 @@ const BASE_CLASSES =
   "md:border-2 border-[#FCFCFC80] md:rounded-full h-full flex max-md:flex-col mx-auto group-focus:border-[#FFFFFF] max-md:gap-2 max-w-[90%]";
 
 const EmailField = (props: EmailFieldProps) => {
-  function ValidateEmail(input:any) {
+  function ValidateEmail(input: any) {
     if (
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
         input.get("email")
@@ -49,7 +49,9 @@ const EmailField = (props: EmailFieldProps) => {
             method: "POST",
             body: data,
           });
-          toast("Success! We'll contact you soon.");
+          toast("Success! We'll contact you soon.", {
+            position: "top-center",
+          });
         } else {
           toast.error("Oh no, doesn't look like a valid email.");
         }

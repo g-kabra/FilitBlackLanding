@@ -49,6 +49,7 @@ function indianconversion(val: number) {
   if (val >= 10000000) s = (val / 10000000).toFixed(2) + " Cr";
   else if (val >= 100000) s = (val / 100000).toFixed(2) + " Lac";
   else if (val >= 1000) s = (val / 1000).toFixed(2) + " K";
+  else s = val.toFixed(2);
   return s;
 }
 
@@ -153,7 +154,9 @@ function InteractiveGraph() {
             <hr />
             <div className="flex justify-between w-full gap-2 text-xl">
               <p>Estimated Returns</p>
-              <p className="text-xl whitespace-nowrap">{"₹ " + indianconversion(totalAmount)}</p>
+              <p className="text-xl whitespace-nowrap">
+                {"₹ " + indianconversion(totalAmount)}
+              </p>
             </div>
             <hr />
             <div className="flex justify-between w-full gap-2 text-xl">
