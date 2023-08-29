@@ -41,7 +41,7 @@ function Blog() {
   const [search, setSearch] = React.useState("");
   React.useEffect(() => {
     getBlogs().then((blogs) => setBlogs(blogs));
-  });
+  }, []);
   return (
     <Layout>
       <div className="bg-clip-text bg-gradient-linear flex flex-col px-5 py-32">

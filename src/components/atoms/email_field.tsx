@@ -44,6 +44,7 @@ const EmailField = (props: EmailFieldProps) => {
         const data = new FormData(e.target);
         //@ts-ignore
         const action = e.target.action;
+        (e.target as HTMLFormElement).reset();
         if (ValidateEmail(data)) {
           fetch(action, {
             method: "POST",
@@ -60,7 +61,7 @@ const EmailField = (props: EmailFieldProps) => {
       <input
         type="text"
         className={
-          "bg-transparent border-0 md:mx-3 focus:outline-0 focus:border-5 focus:border-red md:grow border-[#FCFCFC80] max-md:border-2 max-md:rounded-full max-md:w-full p-3" +
+          "bg-transparent border-0 md:mx-3 focus:outline-0 focus:border-5 focus:border-red md:grow border-[#FCFCFC80] max-md:border-2 max-md:rounded-full max-md:w-full p-3 email-field " +
           (variant === "secondary"
             ? " placeholder:text-white max-md:bg-[#0D0D1880]"
             : "")

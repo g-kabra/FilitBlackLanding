@@ -180,7 +180,7 @@ function InteractiveGraph() {
             </h1>
             <Chart type="bar" options={options} data={data} redraw={true} />
           </Card>
-          <p className="p-5 ml-10 bg-[#FFFFFF0F] w-fit text-sm text-[#FFFFFF1c]">
+          <p className="p-5 ml-10 bg-[#FFFFFF0F] w-fit text-sm text-[#ffffff36]">
             *The calculations are based on to historical performance of Gold
             over last 10 years
           </p>
