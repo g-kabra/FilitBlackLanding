@@ -41,6 +41,21 @@ function About() {
       name: "Madhav Sona",
       designation: "Marketing & Product Head",
     },
+    {
+      image: "/images/Rashika.png",
+      name: "Rashika",
+      designation: "Founder's office",
+    },
+    {
+      image: "/images/Nitish.png",
+      name: "Nitish",
+      designation: "Senior Frontend Developer",
+    },
+    {
+      image: "/images/Abhinav.png",
+      name: "Abhinav",
+      designation: "Associate Frontend Developer",
+    },
   ];
   return (
     <Layout>
