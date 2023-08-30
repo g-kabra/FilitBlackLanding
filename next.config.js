@@ -5,6 +5,7 @@ const nextConfig = {
     loader: 'custom',
     loaderFile: './src/utils/loader.ts',
   },
+  output: "standalone"
 };
 
 module.exports = nextConfig;
