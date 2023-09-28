@@ -23,7 +23,7 @@ const Hero = () => {
               transition={{ duration: 1 }}
               className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center"
             >
-              <h1 className="text-[10vw] font-bold text-center text-transparent">
+              <h1 className="text-[11vw] font-bold text-center text-transparent">
                 Introducing Filit
               </h1>
             </motion.div>
@@ -34,10 +34,10 @@ const Hero = () => {
             transition={{ delay: 1 }}
             src="/images/Hero__Phone.png"
             alt=""
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60vh]"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[75vh]"
           />
         </div>
-        <div className="bg-clip-text bg-gradient-linear flex flex-col justify-center items-center my-10">
+        <div className="bg-clip-text bg-white-text-gradient flex flex-col justify-center items-center my-10">
           <h1 className="text-2xl font-bold text-center text-transparent">
             Save Daily, Invest Automatically and Watch Your Money Grow
           </h1>

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { createClient } from "@sanity/client";
 import { groq } from "next-sanity";
@@ -17,7 +16,7 @@ import sanityIoImageLoader from "@/utils/sanityLoader";
 const sanityClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  useCdn: true
+  useCdn: true,
 });
 const builder = ImageUrlBuilder(sanityClient);
 
@@ -41,7 +40,7 @@ function getBlog(slug: string) {
 
 function getBlogs(slug: string) {
   return sanityClient.fetch(groq`
-      *[_type == "post" && slug.current != "${slug}"]{
+      *[_type == "post" && slug.current != "${slug}"][0...3]{
         title,
         subtitle,
         slug,
@@ -81,17 +80,17 @@ function BlogPost({ params }: { params: { slug: string } }) {
         />
       ) : (
         blog && (
-          <div className="my-20 w-[90%] mx-auto">
+          <div className="my-10 w-[90%] mx-auto">
             <div className="bg-clip-text bg-gradient-linear flex flex-col gap-5 px-5 py-32 max-md:py-16 text-center">
               <h1 className="text-7xl max-md:text-4xl font-bold text-center text-transparent">
                 {blog?.title}
               </h1>
-              <p className="text-5xl max-md:text-2xl">{blog?.subtitle}</p>
-            </div>
-            <div className="flex gap-5 flex-wrap mx-auto justify-center">
+              <p className="text-[32px] max-md:text-lg">{blog?.subtitle}</p>
+              <div className="flex gap-5 flex-wrap mx-auto justify-center opacity-70">
               <p>{blog?.author.name}</p>
               <p>{getDate(new Date(blog?.publishedAt || "2021-01-01"))}</p>
               <p>{blog?.read_time} min</p>
+            </div>
             </div>
             <div className="w-[90%] aspect-[16/9] max-h-[70vh] rounded-xl mx-auto relative my-10">
               <Image

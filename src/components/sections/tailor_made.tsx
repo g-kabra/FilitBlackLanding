@@ -5,8 +5,8 @@ import Card from "../helpers/card";
 
 function TailorMade() {
   return (
-    <div className="flex flex-col items-center">
-      <div className="bg-white-text-gradient bg-clip-text text-transparent pb-20">
+    <div className="flex flex-col items-center my-20">
+      <div className="bg-white-text-gradient bg-clip-text text-transparent pb-10">
         <h1 className="md:text-[3vw] text-[50px] font-bold font-manrope text-center">
           Your One-Stop Savings Solution
         </h1>

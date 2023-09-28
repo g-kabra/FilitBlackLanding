@@ -8,7 +8,7 @@ const InfoBlock = () => {
     "Get trusted purity of BIS/NABL Hallmark",
     "Keep your gold secured in safety vaults",
     "Insured physical delivery of your gold anytime, anywhere",
-    "Withdraw instantly into your bank account",
+    "Withdraw directly into your bank account",
   ];
   return (
     <WhiteCard>

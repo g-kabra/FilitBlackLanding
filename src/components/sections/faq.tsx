@@ -67,6 +67,8 @@ function FAQ() {
                 style={{
                   transform: open === index ? "rotate(90deg)" : "",
                   transition: "all 0.3s ease-in-out",
+                  minHeight: '24px',
+                  minWidth: '24px',
                 }}
               ></Image>
             </div>

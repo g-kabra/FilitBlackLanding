@@ -46,16 +46,6 @@ function About() {
       name: "Rashika",
       designation: "Founder's office",
     },
-    {
-      image: "/images/Nitish.png",
-      name: "Nitish",
-      designation: "Senior Frontend Developer",
-    },
-    {
-      image: "/images/Abhinav.png",
-      name: "Abhinav",
-      designation: "Associate Frontend Developer",
-    },
   ];
   return (
     <Layout>
@@ -195,11 +185,11 @@ function About() {
           </div>
         </div>
       </section> */}
-      <section className="my-10 flex flex-col items-center gap-5 w-[90%] max-w-5xl mx-auto">
-        <h1 className="text-7xl font-bold text-center text-white">
+      <section className="my-10 flex flex-col items-center gap-10 w-[90%] max-w-5xl mx-auto">
+        <h1 className="md:text-7xl text-[50px] font-bold text-center text-white">
           Frequently Asked Questions
         </h1>
-        <p className="text-[#B4BCD0] text-xl">
+        <p className="text-[#B4BCD0] text-xl text-center">
           Everything you need to know about the product and billing.
         </p>
         <FAQ />

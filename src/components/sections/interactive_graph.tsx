@@ -82,7 +82,7 @@ function InteractiveGraph() {
   React.useEffect(() => {
     labels = [1];
     xData = [baseAmount * 365];
-    profitData = [0];
+    profitData = [xData[0] * 0.12];
     let totalAmount = baseAmount * 365;
     for (let i = 1; i < numYears; i++) {
       labels.push(i + 1);
@@ -148,7 +148,7 @@ function InteractiveGraph() {
             <div className="flex justify-between w-full gap-2 text-xl">
               <p>Amount Invested</p>
               <p className="text-xl whitespace-nowrap">
-                {"₹ " + indianconversion(baseAmount * 365 * (numYears + 1))}
+                {"₹ " + indianconversion(baseAmount * 365 * (numYears))}
               </p>
             </div>
             <hr />
@@ -164,7 +164,7 @@ function InteractiveGraph() {
               <p className="text-xl whitespace-nowrap">
                 {"₹ " +
                   indianconversion(
-                    totalAmount + baseAmount * 365 * (numYears + 1)
+                    totalAmount + baseAmount * 365 * (numYears)
                   )}
               </p>
             </div>

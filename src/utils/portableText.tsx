@@ -17,7 +17,7 @@ const serializers = {
       case "h4":
         return <h4 className="my-3 text-lg font-semibold">{props.children}</h4>;
       default:
-        return <p>{props.children}</p>;
+        return <p className="my-[14px]">{props.children}</p>;
     }
   },
   types: {},
@@ -62,6 +62,7 @@ export default function PortableTextComponent({ blocks }: { blocks: any }) {
     <>
       {/* @ts-ignore */}
       <PortableText value={blocks} components={serializers} />
+        {/* my-[14px] */}
     </>
   );
 }
