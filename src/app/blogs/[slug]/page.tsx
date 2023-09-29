@@ -103,7 +103,7 @@ function BlogPost({ params }: { params: { slug: string } }) {
               />
             </div>
             <div className="w-[70%] max-md:w-[90%] mx-auto my-10">
-              {/* my-5 my-3 text-2xl*/}
+              {/* my-5 my-3 text-2xl my-[14px]*/}
               <PortableTextComponent blocks={blog?.body} />
             </div>
           </div>

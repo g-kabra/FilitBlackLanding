@@ -27,7 +27,9 @@ function Blog() {
   const [blogs, setBlogs] = React.useState<any[]>([]);
   const [titles, setTitles] = React.useState<any[]>([]);
   const [search, setSearch] = React.useState<string>("");
-  const [collapsed, setCollapsed] = React.useState<boolean>(false);
+  const [collapsed, setCollapsed] = React.useState<boolean>(
+    window ? window.innerWidth < 768 : false 
+  );
   const [lastPublishedAt, setLastPublishedAt] = React.useState<Date>(
     new Date("2100-01-01")
   );
@@ -38,7 +40,7 @@ function Blog() {
       groq`
     *[_type == "post" && (
       publishedAt < $lastPublishedAt
-      || (publishedAt == $lastPublishedAt && _id > $lastId)
+      || (publishedAt == $lastPublishedAt && _id < $lastId)
     )] | order(publishedAt desc) [0...9] {
       _id,
       title,
@@ -52,14 +54,14 @@ function Blog() {
   `,
       { lastPublishedAt, lastId }
     );
-    console.log(result, lastPublishedAt, lastId);
+    // console.log(result, lastPublishedAt, lastId);
     if (result.length > 0) {
       setLastPublishedAt(result[result.length - 1].publishedAt);
       setLastId(result[result.length - 1]._id);
-      console.log(
-        result[result.length - 1]._id,
-        result[result.length - 1].publishedAt
-      );
+      // console.log(
+      //   result[result.length - 1]._id,
+      //   result[result.length - 1].publishedAt
+      // );
     } else {
       setLastId(""); // Reached the end
     }
@@ -82,23 +84,25 @@ function Blog() {
     return result;
   }
 
+  function handleResize() {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 768) {
+        setCollapsed(true);
+      } else {
+        setCollapsed(false);
+      }
+    });
+  }
+
   React.useEffect(() => {
     getBlogs().then((blogs) => setBlogs(blogs));
     getTitles().then((titles) => setTitles(titles));
-    if (window !== undefined) {
-      window.addEventListener("resize", () => {
-        if (window.innerWidth < 768) {
-          setCollapsed(true);
-        } else {
-          setCollapsed(false);
-        }
-      });
-    }
+    handleResize();
   }, []);
   return (
     <Layout>
-      <div className="bg-clip-text bg-gradient-linear flex flex-col px-5 py-32">
-        <h1 className="text-7xl font-bold text-center text-transparent">
+      <div className="bg-clip-text bg-gradient-linear flex flex-col px-5 py-32 max-w-[90%] mx-auto">
+        <h1 className="md:text-7xl text-[50px] font-bold text-center text-transparent">
           Become Financially Literate
         </h1>
       </div>
@@ -145,7 +149,7 @@ function Blog() {
                   }
                 )}
               </div>
-              {lastId !== "" && (
+              {lastId !== "" ? (
                 <p
                   className="underline cursor-pointer opacity-50 hover:opacity-100 transition-all"
                   onClick={() => {
@@ -156,6 +160,8 @@ function Blog() {
                 >
                   View More
                 </p>
+              ) : (
+                <p className="opacity-50">No more blogs to show</p>
               )}
             </div>
             {/* Blog Search */}
@@ -201,7 +207,9 @@ function Blog() {
                               | {blog?.read_time} mins
                             </p>
                           </Link>
-                          {index !== titles.length - 1 && <hr className="opacity-30"/>}
+                          {index !== titles.length - 1 && (
+                            <hr className="opacity-30" />
+                          )}
                         </>
                       ) : null;
                     }

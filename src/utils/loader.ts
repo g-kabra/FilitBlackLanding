@@ -10,4 +10,5 @@ export default function myImageLoader({
   quality: number;
 }) {
   return `https://filit.in/${src}?w=${width}&q=${quality || 75}`;
+  // return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
 }
