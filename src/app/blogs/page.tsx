@@ -28,7 +28,7 @@ function Blog() {
   const [titles, setTitles] = React.useState<any[]>([]);
   const [search, setSearch] = React.useState<string>("");
   const [collapsed, setCollapsed] = React.useState<boolean>(
-    window ? window.innerWidth < 768 : false 
+    false 
   );
   const [lastPublishedAt, setLastPublishedAt] = React.useState<Date>(
     new Date("2100-01-01")
