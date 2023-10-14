@@ -8,8 +8,8 @@ const HowItWorks = () => {
       heading: "Daily Savings",
       content: (
         <p className="text-sm mt-2 md:max-w-[60%] max-w-[90%] text-[#B4BCD0]">
-          Watch Your Money Grow, Day by Day! <br /> Set a Daily Amount to Save
-          and Watch Your Savings Grow Like Magic.
+          Watch your money grow, day by day! <br />
+          Set a daily amount to save and watch your savings grow like magic.
         </p>
       ),
     },
@@ -17,8 +17,7 @@ const HowItWorks = () => {
       heading: "Fillups",
       content: (
         <p className="text-sm mt-2 md:max-w-[60%] max-w-[90%] text-[#B4BCD0]">
-          Grow Your Savings, Penny by Penny! <br />
-          We Round Up Your Purchases and Save The Difference For You .
+          We round-up your purchases and save the difference for you. These savings get automatically invested into Gold.
         </p>
       ),
     },
@@ -26,9 +25,7 @@ const HowItWorks = () => {
       heading: "One Time Savings",
       content: (
         <p className="text-sm mt-2 md:max-w-[60%] max-w-[90%] text-[#B4BCD0]">
-          Secure your dreams with ease, save sudden bonuses or that extra cash
-          for your future goals. <br />
-          Save instantly with just two clicks.
+          Received a bonus? Got some extra cash?  Save it for your future goals - with just two clicks.
         </p>
       ),
     },

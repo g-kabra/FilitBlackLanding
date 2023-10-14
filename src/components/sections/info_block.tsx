@@ -5,10 +5,10 @@ import InfoBlock__Feature from "../atoms/infoblock__feature";
 
 const InfoBlock = () => {
   const features = [
-    "Get trusted purity of BIS/NABL Hallmark",
-    "Keep your gold secured in safety vaults",
-    "Insured physical delivery of your gold anytime, anywhere",
-    "Withdraw directly into your bank account",
+    "Keep your gold secure in safety vaults",
+    "Offer Trusted Hallmark of BIS/NABL ",
+    "Deliver of your gold physically anytime, anywhere",
+    "Let you withdraw directly into your bank account",
   ];
   return (
     <WhiteCard>
@@ -19,11 +19,11 @@ const InfoBlock = () => {
               Plus
             </p>
             <h1 className="text-[3rem] md:text-[50px] font-bold mb-5">
-              Gold savings is on Z-plus security
+              Your Savings are on Z-Plus Security
             </h1>
             <p className="md:text-[24px] text-[1.25rem] text-[#000000b3]">
-              You can count on Filit: Keeping your gold savings secure, your
-              mind at ease
+              You can count on Filit to keep your Gold Savings secure and your
+              mind at ease.
             </p>
           </div>
           <div className="flex flex-col">
